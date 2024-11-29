@@ -131,10 +131,10 @@ while True:
     acao = input(f"""
 --------------------
     Selecione ação:
-1 - exibir a arvore
-2 - adicionar
-3 - remover caractere
-4 - traduzir para morse
+1 - adicionar caractere
+2 - remover caractere
+3 - traduzir para morse
+4 - exibir a arvore
 5 = fechar
 --------------------
 """)
@@ -151,7 +151,7 @@ while True:
             print("caractere não existe")
     elif acao == "3":
         mensagem = input("inserir mensagem ou caractere para tradução")
-        resposta = arvore.busca(mensagem)
+        resposta = arvore.busca(mensagem.upper())
         if resposta:
             print(resposta)
         else:
